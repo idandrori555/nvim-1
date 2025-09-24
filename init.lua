@@ -119,8 +119,8 @@ vim.schedule(function()
 end)
 
 -- Indentation
-vim.opt.tabstop = 4 -- Number of visual spaces per TAB
-vim.opt.shiftwidth = 4 -- Number of spaces for each indent
+vim.opt.tabstop = 2 -- Number of visual spaces per TAB
+vim.opt.shiftwidth = 2 -- Number of spaces for each indent
 vim.opt.expandtab = true -- Use spaces instead of tabs
 
 -- Enable break indent
@@ -441,6 +441,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>e', ':Ex <CR>', { desc = 'Open netrw file explorer' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
@@ -781,6 +782,8 @@ require('lazy').setup({
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         javascript = { 'prettier' },
+
+        typescript = { 'prettier' },
       },
     },
   },
